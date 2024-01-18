@@ -11,6 +11,7 @@ type dict struct {
 	data map[int]string
 }
 
+
 func newDict() *dict {
 	d := dict{}
 	d.data = map[int]string{}
@@ -18,6 +19,7 @@ func newDict() *dict {
 }
 
 func main() {
+
 
 	p := person{}
 	p.name = "Kim"
