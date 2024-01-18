@@ -8,7 +8,7 @@ func TestRect(t *testing.T) { //TestXxx와 같은 이름으로 작성해야한�
 
 	area := rect.area()
 
-	want := 200
+	want := 200.0
 	if (area != want) {
 		t.Errorf("result is wrong")
 	}
