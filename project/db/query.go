@@ -22,4 +22,22 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(name)
+
+	var id int
+	var username string
+	rows, err := db.Query("SELECT id, username FROM user where id >= ?", 1)
+
+	if(err != nil) {
+		log.Fatal(err)
+	}
+
+	for rows.Next() {
+		err := rows.Scan(&id, &username)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(id, username)
+	}
+
+	
 }
